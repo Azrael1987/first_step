@@ -19,8 +19,9 @@ int main()
 
 	cout << "Podaj rozmiar pizzy: " << endl;
 	cin >> (*pp).size;
-	cout << "Podaj nazwe producenta pizzy: " << endl;
-	cin.get(pp->name, 20);				// tu program nie chce przyjac zmiennej
+	cin.ignore();
+	cout << "Wybrales nastepujaca pizze: " << endl;
+	cin.get(pp->name, 20);				
 	cout << "Podaj wage pizzy: " << endl;
 	cin >> (*pp).weight;
 
@@ -31,8 +32,6 @@ int main()
 
 	delete pp;
 
-	cin.get();
-	cin.get();
 	cin.get();
 	cin.get();
 	return 0;
