@@ -1,5 +1,4 @@
 // sotowanie_liczb.cpp -- program sortujacy liczby rosnaco i malejaco
-
 #include <iostream>
 int main()
 {
@@ -17,13 +16,13 @@ int main()
 	}
 	cout << "test:\n1: " << tab[0] << "\n2: " << tab[1] << "\n3: " << tab[2] << "\n4: " << tab[3] << "\n5: " << tab[4] << endl;
 	cout << "Liczby zostaly przyjete\n";
-	for (int j = 0; j < size; j++)
+	for (int j = 0; j < size; j++) // zmienia badana liczbę Xn
 	{
-		cout << "Petla 2 dziala\n";
+		cout << "Petla 2 dziala\n";			// zmainia porownywana liczba Yn z liczba X
 		for (int k = 0; k < 4; k++)
 		{
 			cout << "krok: " << k + 1 <<" " << endl;
-			if (tab[k] > tab[k + 1]) // sprawdzanie  ktora liczba jest wieksza i przemieszczenie
+			if (tab[k] > tab[k + 1]) // sprawdzanie  ktora liczba jest wieksza i wieksza przemieszczenie nizej
 			{
 			cout << "petla 4 dziala"<<endl;
 			temp[0] = tab[k];
@@ -42,8 +41,7 @@ int main()
 	}
 	cout << "To juz wszystkie liczby." << endl;
 	cout << "A teraz sortowanie malejaco: " << endl;
-	cout << tab[3];
-	for (n = 0, p=size-1; n<=p; ++n, --p)
+	for (n = 0, p=size-1; n<=p; ++n, --p)	// odrwaca kolejnosc liczb w tablicy
 	{
 		temp[0] = tab[n];
 		tab[n] = tab[p];
@@ -51,7 +49,7 @@ int main()
 	}
 	for (n = 0; n < size ; n++)
 	{
-		cout << " tu " << tab[n] << endl;
+		cout << tab[n] << endl;	// wypisuje  liczy z tablicy po zmianie kolejnosci
 	}
 cin.get();
 return 0;
