@@ -4,6 +4,8 @@
 int main()
 {
 	using namespace std;
+	cout << " Aby zakonczyc wczytywanie znakow wcisnij (dla Windows'a) ctrl+Z, a potem enter lub (dla Unix'a) ctrl+D"
+		<< endl;
 	char ch;
 	int count = 0;
 	cin.get(ch);		// proba  oczytania znaku
