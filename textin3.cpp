@@ -7,7 +7,8 @@ int main()
 	char ch;
 	int count = 0;
 	cin.get(ch);		// proba  oczytania znaku
-	while (cin.fail() == false)		// spradzanie EOF
+	while (cin.good() == true)		// spradzanie EOF
+	//while (cin.fail() == false)		// spradzanie EOF -- II metoda
 	{
 		count++;
 		cout << ch;		// licznik
@@ -15,5 +16,6 @@ int main()
 	}
 	cout << "wczytano " << count << " znakow.\n";
 	cin.clear();		//zeruje flagę EOF	
+	cin.get();
 	return 0;
 }
