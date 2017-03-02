@@ -1,5 +1,4 @@
-// nested.cpp -- tepl zagniżdżone i  tablice dwuwymuarowe - podej wyniki ale buguje sie podczas pracy :(
-
+// nested.cpp -- tepl zagniżdżone i  tablice dwuwymuarowe 
 #include<iostream>
 const int Cities = 5;
 const int Years = 4;
@@ -13,7 +12,8 @@ int main()
 		"Nowy Targ",
 		"Krakow",
 		"Jaslo",
-		"Krosno"
+		"Krosno",
+		"Mielec"
 	};
 
 	int maxtemps[Years][Cities] =		// tablica dwuwymiarowa
