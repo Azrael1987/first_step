@@ -1,13 +1,15 @@
 // nested.cpp -- tepl zagniżdżone i  tablice dwuwymuarowe 
 #include<iostream>
+#include <string> 		// zalaaczyc w przypadku uzycia sposobu nr 2
 const int Cities = 5;
 const int Years = 4;
 int main()
 {
 	using namespace std;
 
-
-	const char * cities[Cities] =		// tablica wzkazników
+	/* const char cities[Cities][25] = */	// tablica znaków char	(sposob nr 1)
+	/* const string cities[Cities] = */   // tablica obiektow kalsy string	(sposob nr 2)
+	const char * cities[Cities] =		// tablica wzkazników	(sposob nr 3)
 	{									// 5 lancuchów znakowych
 		"Nowy Targ",
 		"Krakow",
