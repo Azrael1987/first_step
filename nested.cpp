@@ -30,7 +30,8 @@ int main()
 	
 	for (int city = 0; city < Cities; city++)
 	{
-		cout << cities[city];
+		cout.width(15);			// ustala szerokosc pola na 15 znakow - pozwala na uformwoanie tabeli
+		cout << left << cities[city];		// left - wyrownanie  zankow w polu do lewej strony (right, internal)
 		for (int year = 0; year < Years; ++year)
 		{
 			cout <<"\t"<< maxtemps[year][city];
