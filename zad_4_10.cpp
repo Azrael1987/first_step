@@ -1,4 +1,4 @@
-// Zad_4_10.cpp -- zadanie 10 z rodzialu 4
+// zad_4_10.cpp -- zadanie 10 z rodzialu 4
 
 #include <iostream>
 #include <array>
