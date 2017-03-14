@@ -1,4 +1,4 @@
-// macierze_prostokatne_mnozenie_A.cpp -- program do mnozenia macierzy prostokatnych
+// macierze_prostokatne_mnozenie_A.cpp -- program do mnozenia macierzy prostokatnych (92)
 #include <iostream>
 
 int main()
