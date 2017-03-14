@@ -8,7 +8,7 @@ int main()
 	using namespace std;
 
 	int n;	// ilosc testowanych liczb
-	unsigned long long t = 0;					// zmienna testowa do wersikacji  iloczunu reszt
+	unsigned long long t = 0;					// zmienna testowa do werfikacji  iloczunu reszt
 
 	cout << "Porgram do sprawdzania czy podana dodatnia liczba jest liczba pierwsza.\n\n";
 	cout << "Podaj ilosc testowanych liczb: ";
