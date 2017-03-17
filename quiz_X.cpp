@@ -1,4 +1,4 @@
-// quiz.cpp -- quiz 1 kortnego wyboru - program bazujacy na filmie z YT nieco karkolomny switch
+// quiz.cpp -- quiz 1 kortnego wyboru - program bazujacy na filmie z YT nieco karkolomny switch (101)
 #include <iostream>
 #include <fstream>
 #include <string>
