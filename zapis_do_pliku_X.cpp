@@ -1,4 +1,4 @@
-// zapis_do_pliku_X.cpp -- pragram sluzacy do eksportowania danych do pliku *.txt
+// zapis_do_pliku_X.cpp -- pragram sluzacy do eksportowania danych do pliku *.txt (99)
 
 #include <iostream>
 # include <fstream>			// biblioteka do zapisu danych  do pliku
