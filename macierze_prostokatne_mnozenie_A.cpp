@@ -116,6 +116,11 @@ int main()
 		}
 		cout << endl;
 	};
+	
+	delete [] macierzA;			// usuwanie wskaznika i zwalnianie pamieci
+	delete [] macierzB;			// jak wyzej
+	delete [] macierzC;			// jak wyzej
+	
 	cout << endl << endl;
 	cin.get();
 	return 0;
