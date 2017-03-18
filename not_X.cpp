@@ -14,7 +14,7 @@ int main()
 	while (!is_int(num))			// petla dziala dopki liczba num nei jest  z zakresu int
 	{
 		cout << "Poza zakresem - probuj dalej\n";
-		cout << "Liczba powinna zawierac sie miedzy: " << INT_MIN << " a " << INT_MAX << ".";
+		cout << "Liczba powinna zawierac sie miedzy: " << INT_MIN << " a " << INT_MAX << ".\n";
 		cin >> num;
 	}
 	int val = int(num);			// rzutowanie typu z double na int
