@@ -13,7 +13,7 @@ int main()
 	cin >> num;
 	while (!is_int(num))			// petla dziala dopki liczba num nei jest  z zakresu int
 	{
-		cout << "Poza zakresem - probuj dalej: ";
+		cout << "Poza zakresem - probuj dalej\n";
 		cout << "Liczba powinna zawierac sie miedzy: " << INT_MIN << " a " << INT_MAX << ".";
 		cin >> num;
 	}
@@ -24,7 +24,7 @@ int main()
 	return 0;
 }
 
-bool is_int(double x)							// X -definiowanie funkcji
+bool is_int(double x)							// X - definiowanie funkcji
 {
 	if (x <= INT_MAX && x >= INT_MIN)			// uzycie wartosci climits
 		return true;
