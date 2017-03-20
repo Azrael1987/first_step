@@ -1,4 +1,4 @@
-// cinfish_X.cpp -- petla do wczytywania liczb - dane nie liczbowe koncza petle -- listing 6.13
+// cinfish_X.cpp -- petla do wczytywania liczb - dane nie liczbowe koncza petle -- listing 6.13 (113)
 #include <iostream>
 const int Max = 5;		// nazwa stałej z duzej litery bo const
 int main()
