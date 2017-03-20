@@ -1,4 +1,4 @@
-// cinfish.cpp -- petla do wczytywania liczb - dane nie liczbowe koncza petle -- listing 6.13
+// cinfish_X.cpp -- petla do wczytywania liczb - dane nie liczbowe koncza petle -- listing 6.13
 #include <iostream>
 const int Max = 5;		// nazwa stałej z duzej litery bo const
 int main()
@@ -20,14 +20,20 @@ int main()
 		}
 	}
 
+	if (!cin)			//  jesli dane wejsciowe zakonczone  znakiem 'q'			// X
+	{
+		cin.clear();	// zrestowanie strumienia wejsciowego
+		cin.get();		// wczytanie "q"
+	}
+	cin.get();			// wczytanie znaku nowego wiersza po ostatniej wprowadzonej wartosci
 	// obliczanie sredniej
 
 	double total = 0.0;			//zmienna przechowujaca sumaryczna wage
 	for (int j = 0; j < i; j++)
 	{
+		
 		total += fish[j];
 	}
-
 	// wyswietlanie wynikow
 	if (0 == i)
 	{
@@ -35,9 +41,8 @@ int main()
 	}
 	else
 	{
-		cout << total / i << " kg to srednia waga Twoich " << i << " ryb.\n";
+		cout << endl << total / i << " kg to srednia waga Twoich " << i << " ryb.\n";
 	}
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cin.get();
-		return 0;
+	cin.get();		// oczekiwanie na nacisniecie klawisza <enter>
+	return 0;
 }
