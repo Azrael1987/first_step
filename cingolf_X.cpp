@@ -1,4 +1,4 @@
-// cingolf-X.cpp -- petla pobierajaca liczby z pominiecem  innych znakow
+// cingolf-X.cpp -- petla pobierajaca liczby z pominiecem  innych znakow (114)
 #include <iostream>
 
 const int Max = 5;
