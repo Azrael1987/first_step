@@ -6,7 +6,8 @@ int main()
 {
 	using namespace std;
 
-	int golf[Max];
+	double golf[Max];			/*logicznie bylo by dac int poniewaz wyniki w golfie to liczby calkowite 
+	ale chcialem zeby program przyjmowal rowniez wartosci zmiennoprzecinkowe*/
 	cout << "Prosze podac swoje wyniki w golfa.\n";
 	cout << "Musisz podac " << Max << " wynikow.\n";
 	int i;
