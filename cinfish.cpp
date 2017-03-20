@@ -36,8 +36,8 @@ int main()
 	else
 	{
 		cout << total / i << " kg to srednia waga Twoich " << i << " ryb.\n";
+	}
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		cin.get();
 		return 0;
-	}
 }
