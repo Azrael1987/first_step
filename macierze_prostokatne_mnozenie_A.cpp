@@ -1,12 +1,18 @@
-// macierze_prostokatne_mnozenie_A.cpp -- program do mnozenia macierzy prostokatnych (92)
+// macierze_prostokatne_mnozenie_A.cpp -- program do mnozenia macierzy prostokatnych z zapisem do pliku
 #include <iostream>
+#include <fstream>
 
 int main()
 {
 	using namespace std;
+
 	int colA;
 	int rowA;
-	cout << "Progrma do monozenia i dzielenia macierzy.\n\n";
+	
+	ofstream outFile;												// utworzenie obiektu na wyniki o nazwie outFile
+	outFile.open("mnozenie_macierzy.txt", ios::out | ios::app);		// - powiazanie obiektu z plikiem, zapisuj | aktualizuj
+
+	cout << "Progrma do monozenia macierzy.\n\n";
 	cout << "Mnozyc mozna tylko macierz o rozmiarze Y na X przez macierz X na Y\n\n";
 	cout << "Podaj ilosc poziomych wierszy w I macierzy: ";
 	cin >> rowA;
@@ -116,11 +122,47 @@ int main()
 		}
 		cout << endl;
 	};
-	
+
+	// zapisywanei do pliku
+
+	outFile << "Macierz A:" << endl << endl;
+	for (int r = 0; r < rowA; r++)				// Zapisanie macierzy A
+	{
+		for (int c = 0; c < colA; c++)
+		{
+			outFile << "\t" << macierzA[c][r];
+		}
+		outFile << endl;
+	};
+	outFile << endl << endl;
+
+	outFile << "Macierz B:" << endl << endl;
+	for (int r = 0; r < rowB; r++)			// zapisywanie macierzy B
+	{
+		for (int c = 0; c < colB; c++)
+		{
+			outFile << "\t" << macierzB[c][r];
+		}
+		outFile << endl;
+	};
+	outFile << endl;
+
+	outFile << "Macierz C=A*B:" << endl << endl;		// zapiswanie macierzy C
+	for (int r = 0; r < rowC; r++)
+	{
+		for (int c = 0; c < colC; c++)
+		{
+			outFile << "\t" << macierzC[c][r];
+		}
+		outFile << endl;
+	}
+
+	outFile.close();			// zamykanie pliku
+
 	delete [] macierzA;			// usuwanie wskaznika i zwalnianie pamieci
 	delete [] macierzB;			// jak wyzej
 	delete [] macierzC;			// jak wyzej
-	
+
 	cout << endl << endl;
 	cin.get();
 	return 0;
