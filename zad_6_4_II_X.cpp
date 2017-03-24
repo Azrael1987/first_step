@@ -1,4 +1,4 @@
-// zad_6_4_II_X.cpp -- zadanie 4 z rodzialu 6 -- funkcja switch + struktua i menu oraz autosortowanie na wskaznikach - (120)
+// zad_6_4_II_X.cpp -- zadanie 4 z rodzialu 6 -- funkcja switch + struktua i menu oraz z autosortowaniem na wskaznikach - (120)
 
 #include <iostream>
 
@@ -96,14 +96,14 @@ int main()
 		{
 		case 'a': 
 		{
-			for (int j = 0; j < teamSize; j++)			// petla testujaca kolejne slowa
+			for (int j = 0; j < teamSize; j++)			// petla nr 1 testujaca kolejne slowa
 			{
-				for (int k = 0; k < teamSize-1; k++)	// zmiana porownywanych liczb
+				for (int k = 0; k < teamSize-1; k++)	// petla nr 2 - zmiana porownywanych slow
 				{
-					int m = 0;
+					int m = 0;							// petla 3 - porownywanie kolejnych liter w lancuchach
 					if (listA[k][0] < listA[k + 1][0])
 					{
-						continue;
+						continue;						// powrot do petli nr 2
 					}
 					else if (listA[k][m] == listA[k + 1][m])
 					{
@@ -124,22 +124,83 @@ int main()
 			}
 			cout << endl;
 		} 
-		break; // wklepac petle
+		break; 
 	
-		case 'b': cout << "\n" << members[2].job << endl << members[4].job << endl << members[1].job << endl;
-			cout << members[0].job << endl << members[3].job << endl; break;
-		case 'c': cout << "\n" << members[4].nick << endl << members[1].nick << endl << members[0].nick<< endl;
-			cout << members[2].nick << endl << members[3].nick << endl; break;
-		case 'd':
+		case 'b': 
 		{
-			for (int j = 0; j < teamSize; j++)			// petla testujaca kolejne slowa
+			for (int j = 0; j < teamSize; j++)					// petla nr 1 testujaca kolejne slowa
 			{
-				for (int k = 0; k < teamSize-1; k++)	// zmiana porownywanych liczb
+				for (int k = 0; k < teamSize - 1; k++)			// petla nr 2 - zmiana porownywanych slow
+				{
+					int m = 0;									// petla 3 - porownywanie kolejnych liter w lancuchach
+					if (listB[k][0] < listB[k + 1][0])
+					{
+						continue;								// powrot do petli for nr 2
+					}
+					else if (listB[k][m] == listB[k + 1][m])
+					{
+						m++;
+					}
+					else if (listB[k][0] > listB[k+1][0])
+					{
+						temp[0] = listB[k];
+						listB[k] = listB[k + 1];
+						listB[k + 1] = temp[0];
+					}
+				}
+			}
+			cout << "\nLista wg Twojego wyboru:\n\n";
+			for (int i = 0; i < teamSize; i++)
+			{
+				cout << listB[i] << endl;
+			}
+			cout << endl;
+			break;
+		}
+
+		case 'c': 
+		{
+			for (int j = 0; j < teamSize; j++)			// petla nr 1 testujaca kolejne slowa
+			{
+				for (int k = 0; k < teamSize-1; k++)		// petla nr 2 - zmiana porownywanych slow
 				{
 					int m = 0;
+					if (listC[k][0] < listC[k + 1][0])	// petla 3 - porownywanie kolejnych liter w lancuchach
+					{
+						continue;						// powrot do petli nr 2
+					}
+					else if (listC[k][m] == listC[k + 1][m])
+					{
+						m++;
+					}
+					else if (listC[k][0] > listC[k+1][0])
+					{
+						temp[0] = listC[k];
+						listC[k] = listC[k + 1];
+						listC[k + 1] = temp[0];
+					}
+				}
+			}
+			cout << "\nLista wg Twojego wyboru:\n\n";
+			for (int i = 0; i < teamSize; i++)
+			{
+				cout << listC[i] << endl;
+			}
+
+			cout << endl;
+			break;
+		}
+		
+		case 'd':
+		{
+			for (int j = 0; j < teamSize; j++)			// petla nr 1 testujaca kolejne slowa
+			{
+				for (int k = 0; k < teamSize-1; k++)	// petla nr 2 - zmiana porownywanych slow
+				{
+					int m = 0;							// petla 3 - porownywanie kolejnych liter w lancuchach
 					if (listD[k][0] < listD[k + 1][0])
 					{
-						continue;
+						continue;						// powrot do petli for nr 2
 					}
 					else if (listD[k][m] == listD[k + 1][m])
 					{
@@ -159,10 +220,8 @@ int main()
 				cout << listD[i] << endl;
 			}
 			cout << endl;
-		}
-		break;
-			/* cout << "\n" << members[4].nick << endl << members[1].job << endl << members[2].name << endl;
-			cout << members[0].nick << endl << members[3].job << endl; break;*/
+			break;
+		}	
 		default: cout << "Nie ma takiej opcji\a\nWybierz raz jeszcze.\n";
 		}
 		showmenu();
@@ -172,11 +231,11 @@ int main()
 	//cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	//cin.get();
 
-	delete temp;		//zwalnianie pameicie przez usuniecie wskaznikow (x5)
-	delete listA;
-	delete listB;
-	delete listC;
-	delete listD;
+	//delete [] temp;		//zwalnianie pamiecie przez usuniecie wskaznikow (x5)
+	delete [] listA;
+	delete [] listB;
+	delete [] listC;
+	delete [] listD;
 
 	return 0;
 }
