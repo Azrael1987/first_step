@@ -1,4 +1,4 @@
-// zd_6_5.cpp -- zadanie 5 z rodzialu 6 - system podatkowy z menu i swit
+// zad_6_5.cpp -- zadanie 5 z rodzialu 6 - system podatkowy z menu i switch (121)
 
 #include <iostream>
 
