@@ -31,10 +31,10 @@ int main()
 		cout << "plik zostal otwarty\n";
 
 	string word;
-	int count_other = 0;		// licznik znakow iinych niz litery
+	int count_other = 0;		// licznik znakow innych niz litery
 	int count_vowel = 0;		// licznik samoglosek
 	int count_consonant = 0;	// licznik spolglosek
-	int count = 0;				// licznik wczytanych znakow
+	int count = 0;			// licznik wczytanych wyrazow
 
 	inFile >> word;
 
@@ -71,13 +71,13 @@ int main()
 		inFile >> word;
 	}
 
-	if (word[0] == 'q')
+	if (word[0] == 'q' || word[0] == 'Q')
 	{
 		cout << "Koniec wczytywania danych - wpisales \'q\'.\n";
 	}
 	else if (inFile.eof())
 	{
-		cout << "Koniec pliku - wszystkei pliki wczytane."<<endl;
+		cout << "Koniec pliku - wszystkie znaki wczytane."<<endl;
 	}
 	else if (inFile.fail())
 	{
@@ -85,7 +85,7 @@ int main()
 	}
 	else
 	{
-		cout << "wczytywanie danych  przerwane - przyczyna nie znana.\n";
+		cout << "wczytywanie danych  przerwane - przyczyna nieznana.\n";
 	}
 
 	if (count == 0)
