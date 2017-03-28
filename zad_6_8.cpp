@@ -48,7 +48,7 @@ int main()
 		}
 		else if (inFile.fail())
 		{
-			cout << "Wczytywanie danych zostalo przerwane. \n\aBlad typu pliku.";
+			cout << "Wczytywanie danych zostalo przerwane. \n\aBlad typu danych.";
 		}
 		else
 			cout << "Wczytywanie danych zostalo przerwane. \n\aNieznany blad.";
