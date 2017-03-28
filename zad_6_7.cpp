@@ -1,4 +1,4 @@
-// zad_6_7.cpp -- zadanie 7 z rodzialu 6 - licznik slow rzorozniajacy poczatkowy znak - (123)
+// zad_6_7.cpp -- zadanie 7 z rodzialu 6 - licznik slow rozrozniajacy poczatkowy znak - (123)
 
 #include <iostream>
 #include <fstream>
