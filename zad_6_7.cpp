@@ -25,7 +25,7 @@ int main()
 		cout << " Program zaraz zostanie zamkniety.";
 		cin.get();
 		cin.get();
-		exit(EXIT_FAILURE);		// zamkniecie pliku
+		exit(EXIT_FAILURE);		// zamkniecie programu
 	}
 	else
 		cout << "plik zostal otwarty\n";
