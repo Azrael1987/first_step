@@ -1,4 +1,4 @@
-// zad4_1.cpp -- rodzial 4 zadanie 1
+// zad_4_1.cpp -- rodzial 4 zadanie 1
 
 #include <iostream>
 #include <cstring>
