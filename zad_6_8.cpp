@@ -7,11 +7,11 @@
 using namespace std;
 int main()
 {
-	const int Size = 60;
+	const int Size = 120;
 	char filename[Size];
 	ifstream inFile;					// obiekt do wczytywania  z pliku
 
-	cout << "Podaj nazwe pliku: ";
+	cout << "Podaj nazwe pliku lub sciezke dostepu: ";
 	cin.getline(filename, Size);		// nazwa pliku
 
 	inFile.open(filename);				// powiazanie obiektu z plikiem
