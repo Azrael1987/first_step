@@ -3,7 +3,6 @@
 #include <iostream>   // std::noskipws
 #include <fstream>    // ifstream
 #include <cstdlib>    // exit()
-#include <string>
 
 using namespace std;
 int main()
