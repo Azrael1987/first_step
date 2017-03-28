@@ -1,4 +1,4 @@
-// zad_6_8.cpp - zadanie 8 z rodzialu 6 - (124)
+// zad_6_8.cpp - zadanie 8 z rodzialu 6 - (124) -- program liczacy  znaki w pliku (wraz z bialymi znakami)
 
 #include <iostream>   // std::noskipws
 #include <fstream>    // ifstream
