@@ -58,7 +58,7 @@ int main()
 
 	if(count == 0)
 	{
-		cout << "Brak danych do wczytania.\nPlik pusty.";
+		cout << "Brak danych do wczytania.\nPlik jest pusty.";
 	}
 	else
 	{
