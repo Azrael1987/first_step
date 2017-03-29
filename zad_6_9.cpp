@@ -1,9 +1,8 @@
 // zad_6_9.cpp -- zadanie 9 z rodzialu 6 - (123) -- wczytywanie z pliku do struktury
 
 #include <iostream>	// std::noskipws
-#include <fstream>	// biblioteka wejscia-wyjscia - fstream
+#include <fstream>	// biblioteka wejscia-wyjscia - ifstream
 #include <cstdlib>	// exit ()
-#include <string>	// operacje na stringach
 #include <limits>	// .igrone(numeric_limits<streamsize>::max(), '\n')
 
 struct donation
