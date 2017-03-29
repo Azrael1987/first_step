@@ -13,7 +13,7 @@ int main()
 	double side;
 	cin >> side;
 	double volume = cube(side);		// wywolanie funkcji
-	cout << "Kosta majaca bok " << side << " cm ma poejmnosc ";
+	cout << "Kosta majaca bok " << side << " cm ma pojemnosc ";
 	cout << volume << " cm^3\n";
 	cheers(cube(2));				// dziala ochrona prototypu
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
