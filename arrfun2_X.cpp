@@ -1,14 +1,24 @@
 // arrfun2_X.cpp -- (131) - listing 7.6 - funkcje z tablica jako parametr II - wybor wczytywanych elementow
+// funkcja z 2 wymiarowa
 
 #include <iostream>
 const int ArSize = 8;
-int sum_arr(int arr[], int n);				// prototyp funkcji
+int sum_arr(int arr[], int n);				// prototyp funkcji sumujaca  tab jednowymiarowa
+int sum_arr2(int arr2[][4], int size);			// prototyp funkcji sumujaca  tab dwuwymiarowa
 
 int main()
 {
 	int cookies[ArSize] = { 1,2,4,8,16,32,64,128 };
+	int a[6][4] = { {1,2,3,4},{5,6,7,8}, {9,10,11,12}, {0,0,1,1},{5,2,3,6},{2,3,5,1} };
+	
+	int total2 = sum_arr2(a, 3); 
+	std::cout << "Suma trzech pierwszych wierszy tablicy a wynosi: " << total2 << std::endl;
+	total2 = sum_arr2(a, 6);
+	std::cout << "Suma wszystkich wierszy w tablicy a wynosi: " << total2 << std::endl;
+	total2 = sum_arr2(a + 3, 3);
+	std::cout << "Suma od czwartego do szostego wiersza tablicy a wynosi: " << total2 << std::endl;
 
-	std::cout << cookies << " = adres tablicy, ";			// czasem wymagane unsigned cookies
+	std::cout <<std::endl<< cookies << " = adres tablicy, ";			// czasem wymagane unsigned cookies
 	std::cout << sizeof cookies << " = prawdziwa wielkosc tablicy.\n";
 	
 	int sum = sum_arr(cookies, ArSize);
@@ -33,4 +43,13 @@ int sum_arr(int arr[], int n)
 	for (int i = 0; i < n; i++)
 		total = total + arr[i];
 	return total;
+}
+
+int sum_arr2(int arr2[][4], int size)
+{
+	int total2 = 0;
+	for (int r = 0; r < size; r++)
+		for (int c = 0; c < 4; c++)
+			total2 += arr2[r][c];
+	return total2;
 }
