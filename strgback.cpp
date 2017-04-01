@@ -31,8 +31,8 @@ int main()
 char * buildstr(char c, int n)
 {
 	char * pstr = new char[n + 1];			// [n+1] aby zmiescic znak null czyli '\0'
-	pstr[n] = '\0';							// osttni el lancuch ustawiony na null
-	while (n-- > 0)							// zmienszenie wartosci n nastepuje juz podczas sprawdzania warunku petli
-		pstr[n] = c;						//dopelnienie lancucha
+	pstr[n] = '\0';					// ostatni el lancuch ustawiony na null
+	while (n-- > 0)					// zmienszenie wartosci n nastepuje juz podczas sprawdzania warunku petli
+		pstr[n] = c;				// dopelnienie lancucha
 	return pstr;
 }
