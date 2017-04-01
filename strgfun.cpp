@@ -4,7 +4,7 @@
 #include <iostream>
 
 unsigned int c_in_str(const char * str, char ch);		// prrototyp funkcji - wskaznik na stala typu char
-
+// unsigned int c_in_str(const char str[], char ch);		// alternatywny prototyp funkcji
 int main()
 {
 	using namespace std;
