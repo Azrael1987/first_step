@@ -1,13 +1,14 @@
 // structfun_X.cpp -- (137) - listing 7.12 - funkcje majace strukture jako parametr
 // program przeliczajacy uklad wspolzednych biegunowych na prostokatne i odwrotnie
-// poprawic dokladnosc obliczen uzyc  long double i zaokraglen oraz przelicznika z Pi
+// poprawic dokladnosc obliczen
 
 #include <iostream>
 #include <cmath>			// biblioteka z funkcjami artmetycznymi
 #include <cstdlib>			// exit();
 
-const double rad_to_dag = 57.29577951;			// przelicznik z radianow na stopnie --
-const double dag_to_rad = 1 / rad_to_dag;		// przelicznik ze stopni na radiany
+const double rad_to_dag = 57.29577951308767;			// przelicznik z radianow na stopnie 
+const double dag_to_rad = 1 / rad_to_dag;			// przelicznik ze stopni na radiany
+//const long double r_to_d = 180 / M_PI;			// daje mniejsza dokladnosc
 
 struct polar
 {
