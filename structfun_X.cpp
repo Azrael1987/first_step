@@ -1,5 +1,6 @@
 // structfun_X.cpp -- (137) - listing 7.12 - funkcje majace strukture jako parametr
 // program przeliczajacy uklad wspolzednych biegunowych na prostokatne i odwrotnie
+// converter Cartesian coordinates to polar ccrdinates and polar ccrdinates to Cartesian coordinates
 
 #define _USE_MATH_DEFINES
 #include <iostream>
@@ -8,8 +9,8 @@
 
 using namespace std;
 
-const long double rad_to_dag = 57.29577951308767;	// przelicznik z radianow na stopnie
-const long double dag_to_rad = 1 / rad_to_dag;		// przelicznik ze stopni na radiany
+const long double rad_to_deg = 57.29577951308767;	// przelicznik z radianow na stopnie
+const long double deg_to_rad = 1 / rad_to_deg;		// przelicznik ze stopni na radiany
 
 struct polar
 {
@@ -89,7 +90,7 @@ polar rect_to_polar(rect xypos)
 	polar answer_p;
 
 	answer_p.distance = sqrt(xypos.x * xypos.x + xypos.y * xypos.y);		//pierwiastek z sumy kwadartow
-	answer_p.angle =  atan2(xypos.y , xypos.x);				// arcus tang y/x
+	answer_p.angle =  atan2(xypos.y , xypos.x);								// arcus tang y/x
 
 	return answer_p;														//zwraca strukture polar
 }
@@ -99,8 +100,8 @@ rect polar_to_rect(polar dapos)
 	using namespace std;
 	rect answer_r;
 
-	answer_r.x = dapos.distance * cos((dapos.angle*dag_to_rad));			// odleglosc * cos (kat przeliczonego stopni na radiany)
-	answer_r.y = dapos.distance * sin((dapos.angle*dag_to_rad));			// odleglosc * sin (kat przeliczonego stopni na radiany)
+	answer_r.x = dapos.distance * cos((dapos.angle*deg_to_rad));			// odleglosc * sin (kat przeliczonego stopni na radiany)
+	answer_r.y = dapos.distance * sin((dapos.angle*deg_to_rad));			// odleglosc * cos (kat przeliczonego stopni na radiany)
 	return answer_r;
 }
 
@@ -110,7 +111,7 @@ void show_polar(polar dapos)
 
 	cout << "Odleglosc  = " << dapos.distance;
 	cout << ", kat w radianach =" << dapos.angle;
-	cout << ", a kat w stopniach = " << dapos.angle*rad_to_dag << endl;
+	cout << ", a kat w stopniach = " << dapos.angle*rad_to_deg << endl;
 }
 
 void show_rect(rect xypos)
