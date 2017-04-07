@@ -1,4 +1,4 @@
-// zad_7_3.cpp - zadanie 3 z rodzialu 7 - przekazuwanie struktury do funkcji przez wartosc i adres
+// zad_7_3.cpp - zadanie 3 z rodzialu 7 -- (147) - przekazuwanie struktury do funkcji przez wartosc i adres
 
 #include <iostream>
 using namespace std;
