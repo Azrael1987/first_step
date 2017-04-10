@@ -8,9 +8,9 @@ using namespace std;
 int main()
 {
 	long long s;					// ilosc liczb do przetestowania
-	//long long first_number;			// liczba podana przez uzytkowanika - pcozatkowa wartosc ciagu
 	long long element;				// watrosc n=tego elementu ciagu
-	cout << "\nPodaj iloesc liczb do sprawdzenia czy dadza 1 jako el ciagu: ";
+	int count = 0;					// liczna pozadkowa elementu ciagu
+	cout << "Podaj iloesc liczb do sprawdzenia czy dadza 1 jako el ciagu: ";
 	cin >> s;
 	
 	for (int i = 0; i < s; i++)
@@ -18,18 +18,21 @@ int main()
 		cout << "Podaj wartosc " << i+1 << " elementu ciagu: ";
 		cin >> element;
 		while (element != 1)
-		{
+		{	
 			if (element % 2 == 0)
 			{
+				++count;
 				element = element / 2;
-				cout << element<< endl;
+				cout << "Wartosc " << count <<" elementu " <<element<< endl;
 			}
 			else
 			{
+				++count;
 				element = 3 * element + 1;
-				cout << element<< endl;
-			}
+				cout << "Wartosc " << count << " elementu " << element << endl;
+			}	
 		}
+		cout << "\n1 to " << count << " element ciagu.\n";
 	}
 	cout << "\nGotowe :)";
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
