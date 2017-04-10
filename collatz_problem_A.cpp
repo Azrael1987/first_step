@@ -9,12 +9,13 @@ int main()
 {
 	long long s;					// ilosc liczb do przetestowania
 	long long element;				// watrosc n=tego elementu ciagu
-	int count = 0;					// liczna pozadkowa elementu ciagu
+						// liczna pozadkowa elementu ciagu
 	cout << "Podaj iloesc liczb do sprawdzenia czy dadza 1 jako el ciagu: ";
 	cin >> s;
 	cout << "Testowana liczba musi byc calkowita i rozna od zera!" << endl;
 	for (int i = 0; i < s; i++)
 	{
+		int count = 0;
 		cout << "Podaj wartosc " << i+1 << " elementu ciagu: ";
 		cin >> element;
 		while ((element != 1) && (element !=0))
