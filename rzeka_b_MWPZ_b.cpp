@@ -1,6 +1,6 @@
 // rzeka_b_MWPZ.cpp - zadanie z Mistrzostw Wielekopolski w programowonia zespolowym 2012. 
 // program wyznacza droge wyscigu gdzie trasa w jak najwiekszym stopni ma byc wytyczona rzeka (y=0),
-// -10^5 <= s1,f1 <= 10^5. 0 <s2 . f1 <= 10^5. s1 != f1
+// -10^5 <= s1,f1 <= 10^5. 0 <s2 . f1 <= 10^5. s1 != f1 (wersja z mozliwością ominiecia rzeki)
 
 #include <iostream>
 #include <cmath>
