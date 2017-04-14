@@ -1,4 +1,4 @@
-// zad_7_5.cpp - zadanie 5 rodzial 7 - funkcja rekurencyjna obliczajaca silnie parametru calkowitego
+// zad_7_5.cpp - zadanie 5 rodzial 7 - (151) - funkcja rekurencyjna obliczajaca silnie parametru calkowitego
 
 #include <iostream>
 #include <cmath>
