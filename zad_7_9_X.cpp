@@ -12,7 +12,7 @@ struct student
 };
 
 int getinfo(student pa[], int n);			// p f przyjmujacej dane do struktury
-void display1(student st);					// p f pobierajaca jako paramert strukture i wyswietlajaceja ja 
+void display1(student st);				// p f pobierajaca jako paramert strukture i wyswietlajaceja ja 
 void display2(student * ps);				// p f pobierajaca jako parametr adres sturktury i wyswietlajaceja ja
 void display3(const student pa[], int n);	// p f pobierajaca jako parametr adres 1 el struktury oraz liczbe el w tab i wyswietla zawartosc struktury
 
@@ -67,7 +67,7 @@ int getinfo(student pa[], int n)
 
 void display1(student st)
 {
-	cout << "\n2 metoda wyswietlnia stuktury: \n" << "Nazwisko: " << st.fullname << endl;
+	cout << "\n1 metoda wyswietlnia stuktury: \n" << "Nazwisko: " << st.fullname << endl;
 	cout << "Hobby: "<<st.hobby << endl;
 	cout << "Poziom: " << st.ooplevel << endl;
 }
