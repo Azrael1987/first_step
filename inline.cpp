@@ -1,4 +1,4 @@
-// inline.cpp -- 160 - uzycie funkcji inline
+// inline.cpp -- 160 - listing 8.1 - uzycie funkcji inline
 
 #include <iostream>
 
