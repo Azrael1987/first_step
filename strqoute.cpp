@@ -4,9 +4,10 @@
 
 using namespace std;
 
-string version1(const string & s1, const string & s2);		// poprawny prototyp
+string version1(const string & s1, const string & s2);		// poprawny prototyp z referencjami
 const string & version2(string & s1, const string & s2);	// prototyp z efektem uboczny w postaci utraty orginalnego obiektu s1
-const string & version3(string & s1, const string & s2);	// jw + bledne zwrocenei referencji do  obiektu lokalnego
+const string & version3(string & s1, const string & s2);	// jw + bledne zwrocenie referencji do  obiektu lokalnego
+string version4(string a1, string s2);				// poprawny prototyp  bez referencji
 
 int main()
 {
@@ -33,6 +34,10 @@ int main()
 	/*result = version3(input, "@@@"); */  // wyrzuc blad
 	cout << "Lancuch po rozbudowie: " << result << endl;
 	cout << "Orginalny lancuch: " << input << endl; 
+	
+	result = version1(input, "+++");
+	cout << "\nLancuch po rozbudowie: " << result << endl;
+	cout << "Orginalny lancuch: " << input << endl;
 
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	return 0;
@@ -57,4 +62,11 @@ const string & version3(string & s1, const string & s2)
 
 	temp = s2 + s1 + s2;
 	return temp;			// zwracanie referencji do obiektu lokalnego jest niebezpieczne
+}
+
+string version4(string s1, string s2)
+{
+	string temp;
+	temp = s2 + s1 + s2;
+	return temp;
 }
