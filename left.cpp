@@ -28,6 +28,9 @@ char * left(const char * str, int n)
 {
 	if (n < 0)
 		n = 0;
+	//alternatywne rozwiazanie do zmierzenia dlugosci lancucha
+	// int len = strlen(str)
+	// n = (n<len) ? n : len;  // mneijsza z n i len
 	char * p = new char[n + 1];
 	int i;
 	for (i = 0; i < n && str[i]; i++)
