@@ -1,6 +1,7 @@
 // left.cpp - (168) = listing 8.9 - funkcja obsluujaca lancuchy z parametrami domyslnymi
 
 #include <iostream>
+// #include <cstring>
 
 const int ArSize = 80;
 char * left(const char * str, int n = 1);
