@@ -13,7 +13,6 @@ int count = 1;
 
 int main()
 {
-	int count = 1;
 	char text[50];
 	int x;
 	char choice;
