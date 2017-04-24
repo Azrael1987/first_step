@@ -9,7 +9,7 @@ int Show(const char * str, int a);
 
 using namespace std;
 
-int count = 1;
+int licznik = 1;
 
 int main()
 {
@@ -26,14 +26,14 @@ int main()
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		if (x != '\0')
 		{
-			Show(text);
-			count++;
+			Show(text, x);
+			licznik++;
 
 		}
 		else
 		{
-			Show(text, x);
-			count++;
+			Show(text);
+			licznik++;
 		}
 
 		cout << "Czy chcesz kontynuowa? (Y/N)";
@@ -55,7 +55,7 @@ int Show(const char * str)
 
 int Show(const char * str, int a)
 {
-	int d = count;
+	int d = licznik;
 	for (int i = 0; i < d; i++)
 	cout << str << " wariant B" <<endl;
 	
