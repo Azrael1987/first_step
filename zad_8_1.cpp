@@ -4,18 +4,18 @@
 
 int Show(const char * str);
 
-template<class T>
-int Show(const char * str, T a);
+
+int Show(const char * str, int a);
 
 using namespace std;
 
-int count = 0;
+int count = 1;
 
 int main()
 {
 	int count = 1;
 	char text[50];
-	char text2[50];
+	int x;
 	char choice;
 
 	do {
@@ -23,17 +23,17 @@ int main()
 		
 		cin.getline(text, 50);
 		cout << "Podaj parament lub wcisnij enter";
-		cin.getline(text2, 50);
+		cin >> x;
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		if (strlen(text2) == 0)
+		if (x != '\0')
 		{
-			Show(text, text2);
+			Show(text);
 			count++;
 
 		}
 		else
 		{
-			Show(text);
+			Show(text, x);
 			count++;
 		}
 
@@ -53,11 +53,11 @@ int Show(const char * str)
 	return c;
 }
 
-template<class T>
-int Show(const char * str, T a)
+
+int Show(const char * str, int a)
 {
-	int d = 1;
-	for (int i = 0; i < a; i++)
+	int d = count;
+	for (int i = 0; i < d; i++)
 	cout << str << " wariant B" <<endl;
 	
 	return d;
