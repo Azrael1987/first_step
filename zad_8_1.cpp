@@ -3,10 +3,9 @@
 #include <iostream>
 #include <limits>
 
-int Show(const char * str);
+void Show(const char * str);
 
-
-int Show(const char * str, int a);
+void Show(const char * str, const char * str2);
 
 using namespace std;
 
@@ -14,34 +13,33 @@ int licznik = 1;
 
 int main()
 {
-	
+	cout << "Program pobierajcy 1 lub 2 argumenty."<< endl;
+	cout << "Dla 1 argumentu wyswietla tekst, a dla 2 argumentow " << endl;
+	cout << "wyswietla tekst tyle razy ile funkcja byla razy wywolana." << endl;
+	cout << "Ilosc nie zalezna od 2 parametru.\n\n";
+
 	char text[50];
-	int x;
+	char text2[50];
 	char choice;
 
 	do {
-		//
 		cout << "Podaj tekst do wyswietlenia: ";
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cin.get();									// przejmuje z buforu zbedny enter
 		cin.getline(text, 50);
 		cout << "Podaj parament lub wcisnij enter: ";
-		cin >> x;
+		cin.getline(text2, 50);
 		
-		if (x != '\0')
-		{
-			Show(text, x);
-			licznik++;
-
-		}
-		else
+		if ((strlen(text2))==0)
 		{
 			Show(text);
+			licznik++;		
+		}
+		else if (strlen >0)
+		{
+			Show(text, text2);
 			licznik++;
 		}
-
-		cout << "Czy chcesz kontynuowa? (Y/N)";
-		x = '\0';
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				cout << "Czy chcesz kontynuowa? (Y/N)";
 		cin >> choice;
 	} while (choice == 'Y' || choice == 'y' || choice == 'T' || choice == 't');
 
@@ -49,20 +47,17 @@ int main()
 	return 0;
 }
 
-
-int Show(const char * str, int a)
+void Show(const char * str, const  char * str2)
 {
 	int d = licznik;
+	cout << " (wariant 1 po podaniu 2 argumentow)" << endl;
 	for (int i = 0; i < d; i++)
-	cout << str << " wariant 1" <<endl;
-	cout << "Tutaj a=" << a << endl;
-	
-	return d;
+		cout << str << endl;
+	cout << "Tutaj drugi argument to " << str2<<endl<< endl;
 }
 
-int Show(const char * str)
+void Show(const char * str)
 {
-	cout << str << " wariant 2" << endl;
-	int c = 1;
-	return c;
+	cout <<" (wariant 2 po podaniu 1 argumentu)" << endl;
+	cout << str << endl<< endl;
 }
