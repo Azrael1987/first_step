@@ -1,4 +1,6 @@
-// coordin.h -- plik naglowkowy zawiera portotypy funkcji i deklaracje struktur (bedzie zalaczony w plikach file1 i file2)
+// coordin.h -- 182 - listing 9.1
+// plik naglowkowy zawiera portotypy funkcji i deklaracje struktur 
+// (bedzie zalaczony w plikach file1 i file2)
 
 // deklaracje struktur
 #ifndef COORDIN_H_
