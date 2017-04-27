@@ -5,6 +5,7 @@
 // converter Cartesian coordinates to polar ccrdinates and polar ccrdinates to Cartesian coordinates
 
 #include <iostream>
+#include <cstdlib>			// exit();
 
 #include "coordin.h"		// zawiera deklaracje struktur i prototypy funkcji
 using namespace std;
