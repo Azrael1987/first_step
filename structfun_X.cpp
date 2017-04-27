@@ -49,7 +49,6 @@ int main()
 				{
 				rplace = polar_to_rect(pplace);
 				show_rect(rplace);
-				cout << "Wpisz dowolna litere aby wrocic do manu wyboru.\n";
 				}
 			
 			}
@@ -61,7 +60,6 @@ int main()
 				{
 				pplace = rect_to_polar(rplace);
 				show_polar(pplace);
-				cout << "Wpisz dowolna litere aby wrocic do manu wyboru.\n";
 				}
 			}
 			else if (temp == 'q' || temp == 'Q')
@@ -73,7 +71,6 @@ int main()
 			}
 			
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cin.get();
 		show_menu();
 		cin >> temp;
 	}
@@ -98,10 +95,31 @@ polar rect_to_polar(rect xypos)
 rect polar_to_rect(polar dapos)
 {
 	using namespace std;
+	using namespace std;
 	rect answer_r;
 
-	answer_r.x = dapos.distance * cos((dapos.angle*deg_to_rad));			// odleglosc * sin (kat przeliczonego stopni na radiany)
+	if ((dapos.angle == 90) || (dapos.angle == 270))
+		answer_r.x = 0;
+	else
+	{
+		answer_r.x = dapos.distance * cos((dapos.angle*deg_to_rad));	// odleglosc * sin (kat przeliczonego stopni na radiany)
+		cout << "wariant 3" << endl << endl;
+	}
+	
+	if (dapos.distance == 0)
+	{
+		answer_r.x = 0;
+		answer_r.y = 0;
+		cout << "tu blad 1" << endl << endl;
+	}
+	else if ((dapos.angle == 0) || (dapos.angle == 180) || (dapos.angle == 360))
+	{
+		answer_r.y = 0;
+		cout << "blad 2" << endl << endl;
+	}
+	else
 	answer_r.y = dapos.distance * sin((dapos.angle*deg_to_rad));			// odleglosc * cos (kat przeliczonego stopni na radiany)
+	
 	return answer_r;
 }
 
