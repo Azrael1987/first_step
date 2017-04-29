@@ -1,0 +1,33 @@
+// file01.cpp - 189 - Prata 443/6 - pytania sprawdzajace
+// kompilowac z file02.cpp
+#include <iostream>
+
+using namespace std;
+
+void other();
+void another();
+
+int x = 10;
+int y;
+
+int main()
+{
+	cout << x << endl;
+	{
+		int x = 4;
+		cout << x << endl;
+		cout << y << endl;
+	}
+	other();
+	another();
+
+	system("pause");
+	return 0;
+}
+
+void other()
+{
+	int y = 1;
+	cout << "Funkcja other(): " << x << ", " << y << endl;
+}
+
