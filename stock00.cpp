@@ -1,10 +1,9 @@
 // stock00.cpp -- Listing 10.1 - (193) -- implementacja klasy Stock
 // wersja 00
+// kompilować razem z usestock00.cpp i stock00.hpp
 
 #include <iostream>
 #include "stock00.hpp"
-
-
 
 void Stock::acquire(const std::string & co, long n, double pr)
 {
@@ -47,7 +46,7 @@ void Stock::sell(long num, double price)
 	}
 	else if (num > shares)
 	{
-		std::cout << "Nie możesz sprzedać wiecej udzialow niz posiadasz! "
+		std::cout << "Nie możesz sprzedac wiecej udzialow niz posiadasz! "
 			<< "Tranzakcja przerwana.\n";
 	}
 	else
@@ -69,5 +68,5 @@ void Stock::show()
 	std::cout << "Spolka: " << company << std::endl
 		<< " Liczba udzialow: " << shares << "\n"
 		<< " Cena udzialu: " << share_val << "\n"
-		<< " Laczna wartosc udzialow: " << total_val << " zl" << "'\n";
+		<< " Laczna wartosc udzialow: " << total_val << " zl" << "\n";
 }
