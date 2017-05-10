@@ -18,12 +18,10 @@ private:
 		total_val = shares * share_val;
 	}
 public:
-	void acquire(const std::string & co, long n, double pr);
-	void buy(long num, double price);
-	void sell(long num, double price);
-	void update(double price);
-	void show();
-
+	void acquire(const std::string & co, long n, double pr); // I zakup obligacji
+	void buy(long num, double price); // dodatkowy zakup obligacji
+	void sell(long num, double price); // sprzedaż obligacji
+	void update(double price); // aktualizacja wartosci
+	void show(); // wyswietlanie informacji zbiorczych
 };
-
 #endif
