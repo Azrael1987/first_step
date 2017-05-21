@@ -1,4 +1,4 @@
-// zad_10_5.cpp -- zadanie 10 z rodzialu 5 -- wypiswanie  rzadanej ilosci wierszy z gwiazdkami
+// zad_5_10.cpp -- zadanie 10 z rodzialu 5 -- wypiswanie  rzadanej ilosci wierszy z gwiazdkami
 #include<iostream>
 
 int main()
