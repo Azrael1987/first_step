@@ -1,4 +1,4 @@
-// zad_10_2b.hpp - zadanie 2 z rozdzialu 10 - (198) - test klasy Person
+// zad_10_2b.cpp - zadanie 2 z rozdzialu 10 - (198) - test klasy Person
 // kompilowac z zad_10_2a.cpp
 
 #include <iostream>
