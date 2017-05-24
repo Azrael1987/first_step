@@ -1,4 +1,4 @@
-// zad_10_5a.cpp - 201 - zadanie 5 z rodzialu 10 - test klasy stock zawierajaca struktury przechowywane na stosie
+// zad_10_5b.cpp - 201 - zadanie 5 z rodzialu 10 - test klasy stock zawierajaca struktury przechowywane na stosie
 //kompilowac z zad_10_5a.cpp
 
 #include "zad_10_5a.hpp"
