@@ -61,7 +61,7 @@ namespace ConsoleApplication9
             }
             if (!comendLine)
             {
-                parA = pobieranieLiczb("pierwszy");
+                parA = pobieranieLiczb("pierwszy");  // slowa w nawiasach zostana podstawione w zapytaniu z funkcji pobieranieLiczb w miejsc  {0}
                 parB = pobieranieLiczb("drugi");
                 parC = pobieranieLiczb("trzeci");
             }
@@ -77,13 +77,13 @@ namespace ConsoleApplication9
                 Console.ReadLine();
                 return;
             }
-            else if (delta < 0) // spradzenei czy  rownanie posiada pierwiastki rzeczywiste
+            else if (delta < 0) // spradzenie czy rownanie posiada pierwiastki rzeczywiste
             {
                 Console.WriteLine("nie ma rzeczywistych rozwiazan.");
                 Console.ReadLine();
                 return;
             }
-            else if (delta == 0) // sprawdzenei czy rownanie posiada pierwiastek podwojny
+            else if (delta == 0) // sprawdzenie czy rownanie posiada pierwiastek podwojny
             {
                 double x0 = -parB / 2 * parA;
                 Console.WriteLine("ma jeden podwojny pierwiastek: x0 = {0}", x0);
