@@ -1,4 +1,4 @@
-// Szacowanie_A.cs - Program do szacowania czasu potrzebnego do realizacji projektu opraty na rozkladzie prawdopodobienstwa.
+// szacowanie_A.cs - Program do szacowania czasu potrzebnego do realizacji projektu oparty na rozkladzie prawdopodobienstwa.
 
 using System;
 using System.Collections.Generic;
@@ -60,7 +60,7 @@ namespace ConsoleApplication12
         static void Main(string[] args)
         {
             Console.WriteLine("\n\tProgram do szacowania czasu potrzebnego do realizacji");
-            Console.WriteLine("\tprojektu opraty na rozkladzie prawdopodobienstwa.\n\n");
+            Console.WriteLine("\tprojektu oparty na rozkladzie prawdopodobienstwa.\n\n");
 
             int valueReal = pobierzLiczbe("prawdopodobna");     // najbardzieje prawdopodobny czas realizacji projektu
             int valueNeg = pobierzLiczbe("pesymistyczna");      // najbardzieje pesymistyczny czas realizacji projektu
