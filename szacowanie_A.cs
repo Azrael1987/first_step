@@ -72,7 +72,7 @@ namespace ConsoleApplication12
             Console.WriteLine("\nCzas potrzebny na to zadanie to " + ni + "/" + sigma + " jednostek czasu." );
             Console.WriteLine("\nZadanie moze zajac " + ni + " jednostek czasu, \nale tez " + Math.Ceiling(ni + sigma) 
                 + " jedostek czasu, a nawet " + Math.Ceiling(ni + 2 * sigma) + " jednostek czasu.");
-            // metoda Math.Celing zaokragla w gore do pelnych wartosci
+            //metoda Math.Celing zaokragla w gore do pelnych wartosci
             Console.ReadKey();
         }
     }
