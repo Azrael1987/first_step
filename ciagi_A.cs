@@ -1,6 +1,5 @@
-// Program liczacy sume ciagu artmetycznego i geometrycznego, a takze wypisuje ciag Fibonacciego oraz sume jego elementow
+// Program liczacy sume ciagu artmetycznego, silnie, a takze wypisuje ciag Fibonacciego oraz sume jego elementow
 // ciagi_A.cs
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication11
 {
-    class ciagi
+    class ciagi_A
     {
-        public static int pobierzLiczbe (string param)
-        { // ciag Fibonacciego
+        public static ulong pobierzLiczbe (string param)
+        { 
 
 
             bool sukces = true;
-            int numer = 0;
+            ulong numer = 0;
 
             do
             {
-                Console.WriteLine("Podaj dla ilu elementow policzyc ciag {0} :", param);
+                Console.WriteLine("Podaj dla ilu elementow policzyc {0} :", param);
 
                 try     //przejmowanie wyjatkow
                 {
-                    numer = Int32.Parse(Console.ReadLine());
+                    numer = UInt64.Parse(Console.ReadLine());
                     sukces = true;
 
                 }
@@ -40,48 +39,86 @@ namespace ConsoleApplication11
 
 static void Main(string[] args)
         {
-            int valueFib;
-            int valueSumArt;
-            int valueSumGeo;
+            ulong valueFib;
+            ulong valueSumArt;
+            ulong valueSil;
 
-            valueFib = pobierzLiczbe("Fibonacciego");
-            valueSumArt = pobierzLiczbe("artmetycznego");
-            valueSumGeo = pobierzLiczbe("geometrycznego");
+            Console.WriteLine("\n\tProgram do oblicznia sumy ciagu artmetycznego silni");
+            Console.WriteLine("\tz liczby oraz sumy kolejnych el. ciagu Fibonacciego.\n\n");
+
+            valueFib = pobierzLiczbe("ciagu Fibonacciego");
+            valueSumArt = pobierzLiczbe("ciagu artmetycznego");
+            valueSil = pobierzLiczbe("silnie");
+            
+                                     // Suma ciagu artemtycznego 
+                     try             // przejmowanie wyjatkow
+                     {
+                         checked
+                         {
+                            ulong sumA = (((1+(valueSumArt-1)+1)* valueSumArt)/2);
+                            Console.WriteLine("\nSuma ciagu artemtycznego dla {0} wynosi: {1}", valueSumArt, sumA);
+                         }
+                     }
+                     catch (Exception)
+                     {
+                         Console.WriteLine("\a\nBlad przepelnienia calkowitego");
+                         Console.WriteLine(valueSumArt + " to zbyt wiele el. ciagu artmetycznego do obliczenia");
+                         
+                     }
+      
 
 
-            if (true)
-            {
-                for (int i = 1, sum = 0; i <= valueSumArt; i++)          // Suma ciagu artemtycznego za pomoca petli for (chociaz jest na to  prosty wzor)
+
+            for (ulong i = 1, sumG = 1; i <= valueSil; i++)         // Silnia za pomoca petli for (chociaz jest na to  prosty wzor)
                 {
-                    sum += i;
-                    if (i == valueSumArt)
-                        Console.WriteLine("\nSuma ciagu artemtycznego dla {0} wynosi: {1}", i, sum);
+                    try         // przejmowanie wyjatkow
+                    {
+
+                        checked       // sprawdzenie przepelnienia calkowitego
+                        {
+                            sumG *= i;
+                            if (i == valueSil)
+                                Console.WriteLine("\nSilnia z {0} wynosi: {1}", i, sumG);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("\a\nBlad przepelnienia calkowitego");
+                        Console.WriteLine(valueSil + " to zbyt wiele el. silni do obliczenia");
+                        break;
+                    }
                 }
-
-                for (int i = 1, sum = 1; i <= valueSumGeo; i++)         // Suma ciagu geometrycznego za pomoca petli for (chociaz jest na to  prosty wzor)
-                {
-                    sum *= i;
-                    if (i == valueSumGeo)
-                    Console.WriteLine("\nSuma ciagu geometrycznego dla {0} wynosi: {1}", i, sum);
-                }
-
-
+                
                 Console.WriteLine("\nElementy ciagu Fibonacciego:");
                 Console.WriteLine("0) 0");
-                for (int i = 0, prevSumF = 1, curSumF = 1; i < valueFib; i++)
+
+                for (ulong i = 0, prevSumF = 1, curSumF = 1; i < valueFib; i++)    // Suma ciagu Fibonacciego za pomoca petli for 
                 {
-                    Console.WriteLine("{0}) {1} ", i+1 , prevSumF);
-                    int newSumF = prevSumF + curSumF;
-                    prevSumF = curSumF;
-                    curSumF = newSumF;
-                    if (i == (valueFib-1))
+                    try             // przejmowanie wyjatkow
+                    {
+                        checked    // sprawdzenie przepelnienia calkowitego
                         {
-                        Console.WriteLine ("Suma {0} elementow ciagu Fibonacciego wynosi: {1}", i+1, newSumF-1);
+                            Console.WriteLine("{0}) {1} ", i + 1, prevSumF);
+                            ulong newSumF = prevSumF + curSumF;
+                            prevSumF = curSumF;
+                            curSumF = newSumF;
+                            if (i == (valueFib - 1))
+                            {
+                                Console.WriteLine("Suma {0} elementow ciagu Fibonacciego wynosi: {1}", i + 1, newSumF - 1);
+                            }
                         }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("\a\nBlad przepelnienia calkowitego");
+                        Console.WriteLine(valueFib + " to zbyt wiele el. ciagu Fibonacciego do obliczenia");
+                        break;
+                    }
                 }
-            }
-            Console.WriteLine("Wcisnij Enter aby zakonczyc");
-            Console.Read();         // w celu zamrorzenia ekranu
+            
+
+            Console.WriteLine("\nWcisnij dowolny klawisz, aby zakonczyc");
+            Console.ReadKey();         // w celu zamrorzenia ekranu
 
         }
     }
