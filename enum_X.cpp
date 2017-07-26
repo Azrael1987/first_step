@@ -1,4 +1,4 @@
-// enum_X.cpp -- uzycie enumeratorow w petli switch -- listing 6.11
+// enum_X.cpp -- (111) uzycie enumeratorow w petli switch -- listing 6.11
 #include <iostream>
 
 enum {red, orange, yellow, green, blue, violet, indigo};	// X - utworzenie nazwanych stalych dla liczb 0-6
